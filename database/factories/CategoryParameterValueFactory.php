@@ -29,7 +29,7 @@ class CategoryParameterValueFactory extends Factory
         ];
     }
 
-    public function generateValueByType(string $type): string
+    private function generateValueByType(string $type): string
     {
         return match ($type) {
             'bool' => fake()->boolean() ? 'true' : 'false',
