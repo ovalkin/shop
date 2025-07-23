@@ -19,6 +19,7 @@ class ProductCategoryFactory extends Factory
         return [
             'name' => fake()->word(),
             'description' => fake()->text(),
+            'slug' => fake()->word()
         ];
     }
 }
