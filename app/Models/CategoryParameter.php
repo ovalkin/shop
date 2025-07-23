@@ -6,12 +6,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class CategoryParameter extends Model
 {
     /** @use HasFactory<\Database\Factories\CategoryParameterFactory> */
     use HasFactory;
+
+    protected $attributes = [
+        'type' => 'string'
+    ];
 
     public function values(): HasMany
     {
