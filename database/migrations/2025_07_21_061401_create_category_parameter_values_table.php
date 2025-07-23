@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('category_parameter_id')->constrained('category_parameters', 'id');
             $table->foreignId('product_id')->constrained('products', 'id');
-            $table->unique(['category_parameter_id', 'product_id']);
             $table->string('value');
             $table->timestamps();
             $table->softDeletes();
+            $table->unique(['category_parameter_id', 'product_id']);
         });
     }
 
