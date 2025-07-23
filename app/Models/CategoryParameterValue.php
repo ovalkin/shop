@@ -2,14 +2,17 @@
 
 namespace App\Models;
 
+use Database\Factories\CategoryParameterValueFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class CategoryParameterValue extends Model
 {
-    /** @use HasFactory<\Database\Factories\CategoryParameterValueFactory> */
+    /** @use HasFactory<CategoryParameterValueFactory> */
     use HasFactory;
+    use SoftDeletes;
 
     public function parameter(): BelongsTo
     {
