@@ -2,15 +2,15 @@
 
 namespace App\Models;
 
-use Database\Factories\CategoryParameterValueFactory;
+use Database\Factories\ProductParameterValueFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class CategoryParameterValue extends Model
+class ProductParameterValue extends Model
 {
-    /** @use HasFactory<CategoryParameterValueFactory> */
+    /** @use HasFactory<ProductParameterValueFactory> */
     use HasFactory;
     use SoftDeletes;
 

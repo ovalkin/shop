@@ -3,14 +3,14 @@
 namespace Database\Factories;
 
 use App\Models\CategoryParameter;
-use App\Models\CategoryParameterValue;
+use App\Models\ProductParameterValue;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\CategoryParameterValue>
+ * @extends Factory<ProductParameterValue>
  */
-class CategoryParameterValueFactory extends Factory
+class ProductParameterValueFactory extends Factory
 {
     /**
      * Define the model's default state.

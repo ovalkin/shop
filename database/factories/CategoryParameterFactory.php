@@ -2,11 +2,12 @@
 
 namespace Database\Factories;
 
+use App\Models\CategoryParameter;
 use App\Models\ProductCategory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\CategoryParameter>
+ * @extends Factory<CategoryParameter>
  */
 class CategoryParameterFactory extends Factory
 {
