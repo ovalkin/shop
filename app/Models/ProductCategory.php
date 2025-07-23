@@ -15,6 +15,11 @@ class ProductCategory extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $fillable = [
+        'name',
+        'description',
+        'slug'
+    ];
     public function products(): HasMany
     {
         return $this->hasMany(Product::class, 'category_id');
@@ -23,12 +28,10 @@ class ProductCategory extends Model
     {
         return $this->hasMany(CategoryParameter::class, 'category_id');
     }
-
     public function children(): HasMany
     {
         return $this->hasMany(ProductCategory::class, 'parent_id');
     }
-
     public function parent(): BelongsTo
     {
         return $this->belongsTo(ProductCategory::class, 'parent_id');

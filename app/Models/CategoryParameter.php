@@ -19,12 +19,15 @@ class CategoryParameter extends Model
     protected $attributes = [
         'type' => 'string'
     ];
-
+    protected $fillable = [
+        'name',
+        'type',
+        'unit'
+    ];
     public function category(): BelongsTo
     {
         return $this->belongsTo(ProductCategory::class, 'category_id');
     }
-
     public function products(): BelongsToMany
     {
         return $this->belongsToMany(Product::class, 'category_parameter_values')
