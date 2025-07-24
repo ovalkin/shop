@@ -24,6 +24,9 @@ class CategoryParameter extends Model
         'type',
         'unit'
     ];
+    protected $touches = [
+        'category'
+    ];
     public function category(): BelongsTo
     {
         return $this->belongsTo(ProductCategory::class, 'category_id');

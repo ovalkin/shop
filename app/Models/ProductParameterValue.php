@@ -17,6 +17,9 @@ class ProductParameterValue extends Model
     protected $fillable = [
         'value'
     ];
+    protected $touches = [
+        'product'
+    ];
     public function parameter(): BelongsTo
     {
         return $this->belongsTo(CategoryParameter::class, 'category_parameter_id');
