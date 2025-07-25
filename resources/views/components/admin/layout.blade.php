@@ -10,9 +10,9 @@
     <nav class="w-64 bg-gray-800 text-white p-4">
         <h2 class="text-xl font-bold mb-4">Shop</h2>
         <ul>
-            <li class="mb-2"><a href="#" class="hover:text-gray-300">Главная</a></li>
+            <li class="mb-2"><a href="{{route('admin.index')}}" class="hover:text-gray-300">Главная</a></li>
+            <li class="mb-2"><a href="{{route('admin.categories.index')}}" class="hover:text-gray-300">Категории</a></li>
             <li class="mb-2"><a href="#" class="hover:text-gray-300">Продукты</a></li>
-            <li class="mb-2"><a href="#" class="hover:text-gray-300">Категории</a></li>
             <li class="mb-2"><a href="#" class="hover:text-gray-300">Настройки</a></li>
         </ul>
     </nav>
